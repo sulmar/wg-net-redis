@@ -241,3 +241,28 @@ Wyczyszczenie wszystkich kluczy z określonej bazy danych
 ~~~
 -n <database_number> flushdb
 ~~~
+
+
+### Pub/Sub
+
+Utworzenie subskrypcji
+~~~
+subscribe sensors:temp1
+~~~
+
+Wysłanie wiadomości
+~~~
+publish sensors:temp1 54.21
+~~~
+
+Usunięcie subskrypcji
+~~~
+UNSUBSCRIBE
+~~~
+
+Utworzenie subskrypcji ze wzorcem 
+~~~
+psubscribe sensors.temp*
+~~~
+
+
