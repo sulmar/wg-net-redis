@@ -103,21 +103,37 @@ select 1
 
 ###  Tablice asocjacyjne
 
-Dodanie 
+Jeśli chcesz zmodyfikować cały obiekt zwykły string wystarczy:
+
+~~~ 
+SET users:marcin { 'email': 'marcin.sulecki@gmail.com', speed: 120}
 ~~~
-hmset person1 name Marcin surname Sulecki email marcin.sulecki@altkom.pl
+
+Natomiast w przypadku, gdy chcesz mieć dostęp do pojedynczych pól lepszym rozwiązaniem będą tablice asosjacyjne.
+
+Dodanie
+~~~
+HSET users:marcin email marcin.sulecki@gmail.com
+HSET users:marcin speed 120
+~~~
+
+
+Pobranie wybranego pola
+~~~
+HGET users:marcin email
+~~~
+ 
+
+Dodanie wielu wartości
+~~~
+HMSET users:marcin speed 120 email marcin.sulecki@gmail.com
 ~~~
 
 Pobranie wszystich pól
 ~~~
-hgetall
+HGETALL users:marcin
 ~~~
 
-Pobranie wybranego pola
- ~~~
- hget person1 email
- ~~~
- 
  
 
 ### Listy
