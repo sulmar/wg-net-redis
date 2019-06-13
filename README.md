@@ -265,4 +265,20 @@ Utworzenie subskrypcji ze wzorcem
 psubscribe sensors.temp*
 ~~~
 
+## Redis i .NET Core
 
+### Utworzenie klienta
+
+Instalacja biblioteki
+
+~~~ bash
+dotnet add package StackExchange.Redis
+~~~
+
+
+
+
+### Biblioteka rozszerzająca
+~~~ bash
+StackExchange.Redis.Extensions
+~~~
