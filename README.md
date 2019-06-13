@@ -140,19 +140,28 @@ HGETALL users:marcin
 
 Dodanie wartości do listy
 ~~~ 
-lpush temp1 23
-lpush temp1 24
-lpush temp1 23.5
+lpush orders order1
+lpush orders order2
+lpush orders order3
+lpush orders order4
+lpush orders order5
 ~~~
 
-Pobranie zakresu wartości z listy
+
+Pobranie elementów z listy na podstawie zakresu
 ~~~
-lrange temp1 0 10
+lrange orders 0 3
 ~~~
 
-Pobranie wartości z listy na podstawie indeksu
+Pobranie wartości (wraz z usunięciem) z listy
 ~~~
-lindex temp1 2
+lpop orders
+~~~
+
+
+Pobranie elementu z listy na podstawie indeksu
+~~~
+lindex orders 2
 ~~~
 
 
