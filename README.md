@@ -213,6 +213,7 @@ Dodanie elementów
 ZADD skills:marcin 100 csharp
 ZADD skills:marcin 94 wpf-mvvm
 ZADD skills:marcin 2 python
+~~~
 
 Pobranie elementów wg rankingu
 ~~~
