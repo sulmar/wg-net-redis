@@ -275,7 +275,41 @@ Instalacja biblioteki
 dotnet add package StackExchange.Redis
 ~~~
 
+Utworzenie połączenia
 
+~~~ csharp
+ ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("localhost");
+ IDatabase db = redis.GetDatabase();
+~~~
+
+#### String
+
+~~~ csharp
+ 
+ string key = "foo";
+
+ db.StringSet(key, "Boo");
+
+ string value = db.StringGet(key);
+~~~
+
+
+Inkrementacja
+
+~~~ csharp
+string key = "points";
+
+ db.StringIncrement(key);
+
+ db.StringIncrement(key);
+
+ string value = db.StringGet(key);
+
+ System.Console.WriteLine(value);
+
+ db.StringDecrement(key);
+
+~~~
 
 
 ### Biblioteka rozszerzająca
