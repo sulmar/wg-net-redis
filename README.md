@@ -197,6 +197,19 @@ Różnica zbiorów
 sdiff
 ~~~
 
+### Posortowane zbiory
+
+Dodanie elementów
+~~~
+ZADD skills:marcin 100 csharp
+ZADD skills:marcin 94 wpf-mvvm
+ZADD skills:marcin 2 python
+
+Pobranie elementów wg rankingu
+~~~
+ZRANGEBYSCORE skills:marcin 50 100
+~~~
+
 ### Typy przestrzenne
 
 Dodanie pozycji
