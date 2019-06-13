@@ -101,7 +101,7 @@ select 1
 ~~~
 
 
-###  Tablice asocjacyjne
+###  Tablice asocjacyjne (HASH)
 
 Jeśli chcesz zmodyfikować cały obiekt zwykły string wystarczy:
 
