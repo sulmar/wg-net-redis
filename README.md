@@ -148,24 +148,34 @@ HGETALL users:marcin
 
 ### Listy
 
-Dodanie wartości do listy
+Wstawianie elementu do listy (na początek)
+~~~ 
+lpush pages page1
+lpush pages page2
+lpush pages page3
+~~~
+
+Pobranie elementów z listy na podstawie zakresu
+~~~
+lrange pages 0 3
+~~~
+
+
+Usunięcie i pobranie pierwszego elementu z listy
+~~~
+lpop pages
+~~~
+
+Usunięcie i pobranie ostatniego elementu z listy
+~~~
+rpop pages
+~~~
+
+Dołączenie elementu do listy (na koniec)
 ~~~ 
 lpush orders order1
 lpush orders order2
 lpush orders order3
-lpush orders order4
-lpush orders order5
-~~~
-
-
-Pobranie elementów z listy na podstawie zakresu
-~~~
-lrange orders 0 3
-~~~
-
-Pobranie wartości (wraz z usunięciem) z listy
-~~~
-lpop orders
 ~~~
 
 
