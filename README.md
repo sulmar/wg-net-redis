@@ -15,6 +15,16 @@ Uruchomienie trybu interaktywnego
 docker exec -it wg-net-redis redis-cli
 ~~~
 
+Uruchomienie kontenera
+~~~ bash
+docker start wg-net-redis 
+~~~
+
+Zatrzymanie kontenera
+~~~ bash
+docker stop wg-net-redis
+~~~
+
 Sprawdzenie czy Redis odpowiada
 ~~~
 ping
