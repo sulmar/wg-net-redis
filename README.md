@@ -184,6 +184,21 @@ Pobranie elementu z listy na podstawie indeksu
 lindex orders 2
 ~~~
 
+Ustawienie wartości elementu na liście na podstawie indeksu
+~~~
+lset orders 2 order10
+~~~
+
+Usunięcie określonej ilości elementów z listy począwszy od podanej wartości
+~~~
+lrem ordered 2 order5 
+~~~
+
+Usunięcie ostatniego elementu z listy, dołączenie go do innej listy i zwrócenie
+
+~~~
+rpoplpush ordered delivered
+~~~
 
 ### Zbiory
 
