@@ -102,6 +102,11 @@ keys *
  decr points
  ~~~
  
+ Odjęcie określonej liczby do klucza
+ ~~~
+ decrby points 10
+ ~~~
+ 
 
 ### Baza danych
 
